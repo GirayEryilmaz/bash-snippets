@@ -1,2 +1,3 @@
-# slurm-snippets
-Some useful snippets I like to use in slurm scripts
+# bash-snippets
+Some useful bash snippets I like to use.  
+Some of them are for slurm only.
