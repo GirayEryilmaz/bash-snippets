@@ -1,3 +1,6 @@
 # There are multiple ways, one that worked for me:
 source /home/${USER}/.bashrc
-source activate my_env
+conda activate my_env
+
+# can deactivate as well
+#conda deactivate
