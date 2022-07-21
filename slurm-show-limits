@@ -1,1 +1,3 @@
 sacctmgr show qos format="name%-20,maxjobspu%-12,maxtrespu%-30,maxwall%-20"
+
+scontrol show partition
