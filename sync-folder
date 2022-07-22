@@ -1,0 +1,1 @@
+while sleep 10; do rsync -aP <user>@<server>:/path/to/folder ~/Desktop/ ; done
