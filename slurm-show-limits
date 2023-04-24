@@ -1,3 +1,7 @@
 sacctmgr show qos format="name%-20,maxjobspu%-12,maxtrespu%-30,maxwall%-20"
 
 scontrol show partition
+
+# Note to self, also check the file titled
+# Also see What are the Cluster SLURM Settings and Job Limits?
+# for QoS details 
