@@ -1,2 +1,5 @@
-#On a slurm system (like a HPC) 
+# On a slurm system (like a HPC) 
 while sleep 1; do squeue -u "$USER"; done
+
+# even better
+watch -n 1 squeue -u "$USER"
