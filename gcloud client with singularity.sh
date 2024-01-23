@@ -7,10 +7,15 @@ module load singularity
 singularity pull docker://gcr.io/google.com/cloudsdktool/google-cloud-cli:latest
 
 
-singularity exec ~/google-cloud-cli_latest.sif gcloud config set pass_credentials_to_gsutil false
-singularity exec ~/google-cloud-cli_latest.sif gsutil config
-singularity exec ~/google-cloud-cli_latest.sif gsutil cp gs://<the path> <local path>
+singularity exec google-cloud-cli_latest.sif gcloud config set pass_credentials_to_gsutil false
+singularity exec google-cloud-cli_latest.sif gsutil config
+singularity exec google-cloud-cli_latest.sif gsutil cp gs://<the path> <local path>
+
+singularity exec google-cloud-cli_latest.sif gsutil -m rsync -r "gs://<the something>/<folder to copy>" <local path>
 
 additional resource:
 https://blog.cpming.top/p/gsutil-serviceexception-401-anonymous-caller
 https://cloud.google.com/storage/docs/quickstart-gsutil
+
+
+
