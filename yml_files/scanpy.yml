@@ -1,0 +1,15 @@
+channels:
+  - conda-forge
+  - bioconda
+
+dependencies:
+  - python
+  - scanpy
+  - python-igraph
+  - leidenalg
+  - ipykernel
+  - scrublet
+  - pyarrow
+  - pip
+  - pip:
+    - bbknn
