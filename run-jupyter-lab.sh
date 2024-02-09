@@ -1,24 +1,23 @@
 #!/usr/bin/env bash
-### SLURM HEADER
+
 #SBATCH --job-name=jupyter
-#SBATCH --output=/path/to/jupyterlogs/jupyter.log
-#SBATCH --mail-type=FAIL
-#SBATCH --qos=batch
-#SBATCH --time=2:00:00
+#SBATCH --output=/home/me/logs.log  #Set up your log file
+#SBATCH --error=/home/me/errors.log
+##SBATCH --partition=dev
+##SBATCH --qos=dev
+#SBATCH --time=8:30:00
 #SBATCH --nodes=1
-#SBATCH --ntasks-per-node=2
-#SBATCH	--cpus-per-task=4
-#SBATCH --mem=32000
-### SLURM HEADER
+#SBATCH --ntasks-per-node=1
+#SBATCH	--cpus-per-task=16
+#SBATCH --mem=200GB
 
-cd /my/jupyter/dir
+eval "$(conda shell.bash hook)"
+conda activate jupyter_env
 
-export PATH=/home/${USER}/miniconda/bin:$PATH
+cd /the/path/
 
-# Activate an environment here if you want. 
-# Check the python version in the environment
 python -c 'import sys; print("Running python version:", ".".join(map(str, sys.version_info[:3])))'
 
-PORT=11111
-echo "The ip is http://`hostname -i`:$PORT/lab"
-jupyter-lab --no-browser --port=$PORT --ip=`hostname -i` --LabApp.token='somepassword'
+PORT=1111
+echo -e "The ip is \nhttp://`hostname -i`:$PORT/lab"
+jupyter-lab --no-browser --port="$PORT" --ip=`hostname -i` --LabApp.token='somepassword'
