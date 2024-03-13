@@ -1,0 +1,11 @@
+name: seuratdisk
+
+channels:
+  - conda-forge 
+
+dependencies:
+  - r-base
+  - r-seurat
+  - r-seuratdisk
+  - r-hdf5r
+  
