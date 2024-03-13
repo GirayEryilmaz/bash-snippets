@@ -1,0 +1,16 @@
+channels:
+  - conda-forge
+  - bioconda
+
+dependencies:
+  - python
+  - ipykernel
+  - bustools
+  - kallisto
+  - pip
+
+# The clone kite repo
+# git clone https://github.com/pachterlab/kite
+# No need to setup, just run it:
+# python kite/featuremap/featuremap.py "FeatureBarcodes.csv" --header
+# You need to have the FeatureBarcodes.csv provided.
