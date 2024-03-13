@@ -1,0 +1,15 @@
+name: seurat4.3
+
+channels:
+  - conda-forge 
+
+dependencies:
+  - r-base=4.3
+  - r-seurat=4.3
+  - r-irkernel
+  - jupyter_client
+  - r-hdf5r
+
+# After this, to register the r-kernel to jupyter, do:
+# Start R and do: IRkernel::installspec()
+# This requires jupyter_client installed in the R environment 
